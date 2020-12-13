@@ -1,6 +1,6 @@
 # README
 
-poly-app: A RoR app that combines the separate apps of the Udemy RoR 5/6 course.
+poly-app: A RoR app that combines the separate apps of the Udemy RoR 5/6 course: https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/.
 
 ----
 
