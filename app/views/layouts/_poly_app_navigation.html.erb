@@ -1,0 +1,57 @@
+<!-- LOGO ROW -->
+<nav class="navbar fixed-top navbar-expand-sm" style="height: 50px;">
+  <div class="container-fluid">
+    <div class="ml-1">
+      <span id="logo_icon"> &#10044 &nbsp; </span>   <!-- 6-lobed dingbat daisy hollow center -->
+      <!-- < % =  link_to "poly-app", root_path, class: "navbar-brand", id: "logo" %>  -->
+      <span class="navbar-brand", id="logo"> poly-app </span>
+    </div>
+    <ul class="navbar-nav mr-1">
+      <li class="nav-item">
+        <%= link_to "Log In", users_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign Up", users_path, class: "nav-link" %>
+      </li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- NOT WORKING, and we do not have Font-Awesome in this project, so using Unicode.
+          <span class="navbar-toggler-icon"></span> 
+        -->
+        <span style="color: white; font-size: 24px;"> &#x2630 </span>  <!-- Hamburger character -->
+      </button>
+    </ul>
+  </div>
+</nav>
+
+<!-- MAIN MENU ROW -->
+<nav class="navbar fixed-top navbar-expand-sm" id="main_menu" style="postition: fixed; top: 50px;">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Blog", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Photos", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Projects", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Stock", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "University", users_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About", users_path, class: "nav-link" %>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>

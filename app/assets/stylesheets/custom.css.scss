@@ -1,23 +1,45 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-  background-color: black !important;
+  background-color: black;
 }
 .nav-link {
   color: white !important;
+}
+
+#logo_icon {
+  float: left;
+  color: orangered; 
+  font-size: 42px;
+  position: relative;
+  top: -3px;
 }
 
 #logo {
   float: left;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: -1px;
   font-weight: bold;
   }
 
-#home-container {
-  margin-top: 25px;
+.navbar-brand {
+  font-size: 3rem;
+}
+  
+#main_menu.navbar {
+  background-color: #333;
+  height: 40px;
+}
+
+#sub_menu.navbar {
+  background-color: #555;
+  height: 30px;
+}
+
+#page-container {
+  margin-top: 120px;   /* Below the 3 nav rows (50 + 40 + 30) */
 }
 
 .jumbotron {
@@ -39,9 +61,6 @@ html, body {
 
 #sticky-footer {
   flex-shrink: none;
-}
-.navbar-brand {
-  font-size: 3rem;
 }
 
 .category-badge {

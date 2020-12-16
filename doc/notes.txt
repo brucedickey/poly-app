@@ -107,3 +107,5 @@ User.first.admin            -- Check admin Boolean for first user
 
 user = User.find_by(username: "Mr ba")
 user.toggle!(:admin)        -- Toggle admin Boolean
+
+* The logo images is the Unicode "Open Center Teardrop-Spoked Asterisk": &#10044;  ✼ 

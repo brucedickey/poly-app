@@ -1,5 +1,26 @@
 
-<h3>Alpha-Blog About</h3>
+<div class="container-fluid" id="page-container">
+  <%= link_to 'Home page', root_path %>
+  <br /><br />
 
-<%= link_to 'Articles listing', articles_path %> |
-<%= link_to 'Home page', root_path %>
+  <h2>About</h2>
+   
+  <p>
+    Poly-app consists of the six apps from Udemy's 
+    <%= link_to 'The Complete Ruby on Rails Developer Course', 
+                'https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/' %>.
+  </p>
+  <p>
+    Login and user account applies globally, and uses `devise`. The instructor used a mix of CSS 
+    frameworks, but in this aggregated app all sub-apps use Bootstrap 4. The six sub-apps are:
+  </p>  
+  <table>
+    <tr><td><em> Blog       &nbsp; </em></td><td> A blog app having articles, categories, auth, users, profiles. </td></tr> 
+    <tr><td><em> Messenger  &nbsp; </em></td><td> A messenger/chat app using websocket and redis. </td></tr>
+    <tr><td><em> Stock      &nbsp; </em></td><td> Financial stock tracker that demonstrates hitting an external API. </td></tr>
+    <tr><td><em> Photos     &nbsp; </em></td><td> A photo-sharing app having email, payments, and file upload. </td></tr>
+    <tr><td><em> Projects   &nbsp; </em></td><td> A project manager app using `milia`, a multi-tenanting gem. </td></tr>
+    <tr><td><em> University &nbsp; </em></td><td> A simple starter app for selecting university classes. It uses many-to-many assoc. </td></tr>
+  </table>
+
+</div>
