@@ -1,6 +1,7 @@
 
 # frozen_string_literal: true
 
+module Blog
 class ArticlesController < ApplicationController
   # These must be in proper order!
   before_action :set_article, only: [:show, :edit, :update, :destroy]
@@ -77,4 +78,5 @@ class ArticlesController < ApplicationController
     flash[:warning] = "You can only edit or delete your own articles"
     redirect_to @article   # root_path
   end
+end
 end

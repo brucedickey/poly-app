@@ -7,12 +7,30 @@
       <span class="navbar-brand", id="logo"> poly-app </span>
     </div>
     <ul class="navbar-nav mr-1">
-      <li class="nav-item">
-        <%= link_to "Log In", users_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Sign Up", users_path, class: "nav-link" %>
-      </li>
+      <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
+        </li> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfile" role="button" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Your <%= "Admin" if current_user.admin? %> Profile
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div> 
+        </li>
+      <% else %>   
+        <li class="nav-item">
+          <%= link_to 'Log in', login_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+        </li>
+      <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -29,6 +47,15 @@
 <nav class="navbar fixed-top navbar-expand-sm" id="main_menu" style="postition: fixed; top: 50px;">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- NOT WORKING, and we do not have Font-Awesome in this project...
+          <span class="navbar-toggler-icon"></span> 
+        -->
+        <span style="color: white; font-size: 24px;"> &#x2630 </span>  <!-- Hamburger character -->
+      </button>
+
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <%= link_to "Blog", users_path, class: "nav-link" %>
