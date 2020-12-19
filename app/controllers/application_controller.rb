@@ -6,7 +6,25 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # Tell Rails to make these methods available to views.
-  helper_method :current_user, :logged_in?
+  helper_method :active_app?, :current_user, :logged_in?
+
+  def initialize
+    super
+    @apps        = ['about', 'blog', 'messages', 'photos', 'projects', 'stock', 'university']
+    @apps_status = {}
+
+    clear_apps_status
+    active_app('blog')
+  end
+
+  def active_app(app)
+    clear_apps_status
+    @apps_status[app] = 'active-menu-item'
+  end
+
+  def active_app?(app)
+    @apps_status[app]
+  end 
 
   def current_user
     # Return the user obj of the logged in user if any,
@@ -23,5 +41,11 @@ class ApplicationController < ActionController::Base
 
     flash[:warning] = "You must be logged in to perform that action"
     redirect_to login_path   # root_path
+  end
+
+  private
+
+  def clear_apps_status 
+    @apps.each { |k| @apps_status[k] = '' }
   end
 end

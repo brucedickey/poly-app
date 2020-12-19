@@ -34,7 +34,7 @@
 }
 
 .sub_menu.navbar {
-  background-color: #484848;
+  background-color: #505050;
   position: fixed;
   height: 30px;
 }
@@ -42,6 +42,11 @@
 .sub_menu .nav-link {
   padding-top: 6px;
   font-size: 0.85em;
+}
+
+.active-menu-item {
+  background-color: #505050;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .search-controls {

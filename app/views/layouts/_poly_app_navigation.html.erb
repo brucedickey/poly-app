@@ -58,25 +58,25 @@
 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <%= link_to "Blog", users_path, class: "nav-link" %>
+          <%= link_to "Blog", blog_articles_path, class: "nav-link " + active_app?('blog') %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", users_path, class: "nav-link" %>
+          <%= link_to "Messages", users_path, class: "nav-link " + active_app?('messages') %>
         </li>
         <li class="nav-item">
-          <%= link_to "Photos", users_path, class: "nav-link" %>
+          <%= link_to "Photos", users_path, class: "nav-link " + active_app?('photos') %>
         </li>
         <li class="nav-item">
-          <%= link_to "Projects", users_path, class: "nav-link" %>
+          <%= link_to "Projects", users_path, class: "nav-link " + active_app?('projects') %>
         </li>
         <li class="nav-item">
-          <%= link_to "Stock", users_path, class: "nav-link" %>
+          <%= link_to "Stock", users_path, class: "nav-link " + active_app?('stock') %>
         </li>
         <li class="nav-item">
-          <%= link_to "University", users_path, class: "nav-link" %>
+          <%= link_to "University", users_path, class: "nav-link " + active_app?('university') %>
         </li>
         <li class="nav-item">
-          <%= link_to "About", users_path, class: "nav-link" %>
+          <%= link_to "About", users_path, class: "nav-link " + active_app?('about') %>
         </li>        
       </ul>
     </div>

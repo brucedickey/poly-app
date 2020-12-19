@@ -5,11 +5,11 @@ FEATURES TO ADD:
 
 * Overall app:
    -- Namespace the routes for the sub apps and place their controllers in
-      separate like-named modules (dirs)
-   -- Move the Alpha Blog to a sub app
+      separate like-named modules (dirs)   
    -- Add in the MessageMe app as a sub app
 
 * Blog: 
+   -- Test all Blog app features
    -- When deleting an article on the Categories view, it redirects to the 
       Articles view afterwards. It would be a nice to remain on the Categories
       view.
@@ -59,3 +59,4 @@ SCRATCHPAD:
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+<% active_app? if active_app == 'Blog' %>

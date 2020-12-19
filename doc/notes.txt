@@ -100,6 +100,7 @@ pwd: ralph     User id:  7, username: "Ralph",        email: "ralph@q.com",     
 pwd: darson    User id:  8, username: "d'Arson Crew", email: "dac@q.com",        password_digest: [FILTERED], admin: false>, 
 pwd: <unknown> User id:  2, username: "Mr ba",        email: "aa-aaaaaaa@a.com", password_digest: [FILTERED], admin: false>, 
 
+
 * Check / set admin user:
 rails c
 User.all                    -- List users; will contain admin column
@@ -108,4 +109,5 @@ User.first.admin            -- Check admin Boolean for first user
 user = User.find_by(username: "Mr ba")
 user.toggle!(:admin)        -- Toggle admin Boolean
 
-* The logo images is the Unicode "Open Center Teardrop-Spoked Asterisk": &#10044;  ✼ 
+
+* The logo image is the Unicode "Open Center Teardrop-Spoked Asterisk": &#10044;  ✼ 
