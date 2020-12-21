@@ -58,7 +58,7 @@ class ArticlesController < ApplicationController
     # @article = Article.find(params[:id])
 
     @article.destroy
-    redirect_to articles_path
+    redirect_to blog_articles_path
   end
 
   # Place `private` near the bottom -- all methods AFTER it are private.

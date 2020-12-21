@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+module Blog
 class CategoriesController < ApplicationController
   # To require an admin logged in for new and create
   before_action :require_admin, except: [:index, :show]
@@ -56,3 +57,5 @@ class CategoriesController < ApplicationController
     redirect_to categories_path
   end
 end
+end
+
