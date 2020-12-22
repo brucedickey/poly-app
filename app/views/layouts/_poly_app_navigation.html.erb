@@ -1,10 +1,11 @@
 <!-- LOGO ROW -->
 <nav class="navbar fixed-top navbar-expand-sm" style="height: 50px;">
   <div class="container-fluid">
-    <div class="ml-1">
-      <span id="logo_icon"> &#10044 &nbsp; </span>   <!-- 6-lobed dingbat daisy hollow center -->
-      <!-- < % =  link_to "poly-app", root_path, class: "navbar-brand", id: "logo" %>  -->
-      <span class="navbar-brand", id="logo"> poly-app </span>
+    <div class="ml-1" navbar-brand>
+      <a href="/">
+        <span id="logo_icon"> &#10044 &nbsp; </span>   <!-- 6-lobed dingbat daisy hollow center -->
+        <span class="navbar-brand", id="logo"> poly-app </span>
+      </a>
     </div>
     <ul class="navbar-nav mr-1">
       <% if logged_in? %>
@@ -76,7 +77,7 @@
           <%= link_to "University", users_path, class: "nav-link " + active_app?('university') %>
         </li>
         <li class="nav-item">
-          <%= link_to "About", users_path, class: "nav-link " + active_app?('about') %>
+          <%= link_to "About", about_path, class: "nav-link " + active_app?('about') %>
         </li>        
       </ul>
     </div>
