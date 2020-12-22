@@ -8,10 +8,10 @@ FEATURES TO ADD:
       separate like-named modules (dirs)   
    -- Add in the MessageMe app as a sub app
    -- Darker separator lines in menus
+   -- Ensure adequate margin-top on category and article pages
 
 * Blog: 
    -- Test all Blog app features
-   -- Ensure adequate margin-top on category and article pages
    -- Change paginator color to black
    -- When deleting an article on the Categories view, it redirects to the 
       Articles view afterwards. It would be a nice to remain on the Categories
@@ -20,11 +20,7 @@ FEATURES TO ADD:
 
 
 BUGS:
--- Make sure sub_menu shows up on all sub_app pages
--- Hook up the About menu item
--- Hook up logo to Home
 -- Make the hamburger icon work
-
 
 
 TODO:
