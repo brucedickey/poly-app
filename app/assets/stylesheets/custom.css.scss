@@ -31,12 +31,14 @@
 #main_menu.navbar {
   background-color: #333;
   height: 40px;
+  z-index: 999;
 }
 
 .sub_menu.navbar {
   background-color: #505050;
   position: fixed;
   height: 30px;
+  z-index: 999;
 }
 
 .sub_menu .nav-link {
