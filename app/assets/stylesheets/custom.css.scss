@@ -1,5 +1,18 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html, body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
 .navbar {
   background-color: black;
 }
@@ -71,19 +84,6 @@
   margin-top: 120px;   /* Below the 3 nav rows (50 + 40 + 30) */
 }
 
-html, body {
-  height: 100%;
-}
-
-#page-content {
-  flex: 1 0 auto;
-  background-color: lightgrey;
-}
-
-#sticky-footer {
-  flex-shrink: none;
-}
-
 .category-badge {
   background-color: #CEF6F5;
   color: blue;
@@ -108,7 +108,7 @@ html, body {
   height: 425px;
 }
 
-/* pagination styling */
+/* START pagination styling */
 
 .flickr_pagination {
   text-align: center;

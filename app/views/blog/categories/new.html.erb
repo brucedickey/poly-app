@@ -1,9 +1,12 @@
+<%= render "blog/layouts/navigation" %>
 
-<h1 class="row justify-content-center">Create new category</h1>
+<div class="container-fluid" id="page-container">
+    <h1 class="row justify-content-center">Create new category</h1>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<div class="row justify-content-center"> 
-    <%= link_to '[ Cancel and return to categories listing ]', 
-                blog_categories_path, class: "mb-5 text-info" %>
+    <div class="row justify-content-center"> 
+        <%= link_to '[ Cancel and return to categories listing ]', 
+                    blog_categories_path, class: "mb-5 text-info" %>
+    </div>
 </div>
