@@ -7,7 +7,6 @@ FEATURES TO ADD:
    -- Namespace the routes for the sub apps and place their controllers in
       separate like-named modules (dirs)   
    -- Add in the MessageMe app as a sub app
-   -- Darker separator lines in menus
    -- Ensure adequate margin-top on category and article pages
 
 * Blog: 

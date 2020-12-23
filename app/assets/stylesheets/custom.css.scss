@@ -85,6 +85,12 @@ html, body {
   margin-top: 120px;   /* Below the 3 nav rows (50 + 40 + 30) */
 }
 
+.dropdown-divider {
+  border-color: darkgrey;
+  max-width: 90%;
+  margin-left: 5%;
+}
+
 .category-badge {
   background-color: #CEF6F5;
   color: blue;
