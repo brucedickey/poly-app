@@ -16,13 +16,11 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-
   # Add more helper methods to be used by multiple tests here...
-
 
   def sign_in_as(user, password)
     # Session not created yet in integration tests:
-    #post login_path, session: {email: user.email, password: password}
+    # post login_path, session: {email: user.email, password: password}
 
     # For Rails 5, according to the video
     post login_path, params: { session: { email: user.email, password: password } }

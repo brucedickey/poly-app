@@ -61,10 +61,10 @@ class UsersController < ApplicationController
   end
 
   def require_logged_in
-    if current_user.nil?
-      flash[:warning] = "Please log in to edit your account"
-      redirect_to root_path
-    end
+    return unless current_user.nil?
+
+    flash[:warning] = "Please log in to edit your account"
+    redirect_to root_path
   end
 
   def require_same_user

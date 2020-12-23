@@ -28,8 +28,8 @@ module AlphaBlog
     # config.autoloader = :classic
 
     # `Rails` is undefined... Rails.root.join("app", "models", "{*/}")
-    autoload :Article, 'app/models/blog/article.rb'
-    autoload :Category, 'app/models/blog/category.rb'
-    autoload :ArticleCategory, 'app/models/blog/article_category.rb'
+    autoload :Article, "app/models/blog/article.rb"
+    autoload :Category, "app/models/blog/category.rb"
+    autoload :ArticleCategory, "app/models/blog/article_category.rb"
   end
 end

@@ -10,21 +10,22 @@ class ApplicationController < ActionController::Base
 
   def initialize
     super
-    @apps        = ['about', 'blog', 'home', 'messages', 'photos', 'projects', 'stock', 'university']
+    @apps = ["about", "blog", "home", "messages", "photos", "projects", "stock",
+      "university",]
     @apps_status = {}
 
     clear_apps_status
-    active_app('blog')
+    active_app("blog")
   end
 
   def active_app(app)
     clear_apps_status
-    @apps_status[app] = 'active-menu-item'
+    @apps_status[app] = "active-menu-item"
   end
 
   def active_app?(app)
     @apps_status[app]
-  end 
+  end
 
   def current_user
     # Return the user obj of the logged in user if any,
@@ -33,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    !!current_user   ## !! to convert to Boolean
+    !!current_user ## !! to convert to Boolean
   end
 
   def require_user
@@ -45,7 +46,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def clear_apps_status 
-    @apps.each { |k| @apps_status[k] = '' }
+  def clear_apps_status
+    @apps.each { |k| @apps_status[k] = "" }
   end
 end

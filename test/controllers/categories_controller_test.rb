@@ -29,7 +29,7 @@ class CategoriesControllerTest < ActionController::TestCase
   end
 
   test "Should get show" do
-    get(:show, params: {"id" => @category.id})
+    get(:show, params: { "id" => @category.id })
     assert_response :success
   end
 
@@ -48,7 +48,7 @@ class CategoriesControllerTest < ActionController::TestCase
 
       # This works, and initially returns 200 success instead of 3xx redirect, because
       # the category new page is not limited to admin users yet.
-      post :create, params: {category: {name: "sports"}}
+      post :create, params: { category: { name: "sports" } }
     end
 
     assert_redirected_to categories_path, "assert_redirected_to categories_path"
