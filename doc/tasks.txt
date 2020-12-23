@@ -5,11 +5,11 @@ FEATURES TO ADD:
 
 * Overall app:
    -- Add in the MessageMe app as a sub app
-   -- Highlight the menu item selected on the main menu
-   
+
 * Blog: 
-   -- Test all Blog app features
    -- On the pagination buttons, indicate the current page
+   -- On the edit profile page, if it is canceled, don't go explicitly to the articles page an more.
+      Instead, go to the prior page, whatever that was.
 
 
 BUGS:

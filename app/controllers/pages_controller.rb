@@ -7,9 +7,11 @@ class PagesController < ApplicationController
     # TODO: Display this (from elsewhere) if in the Blog subapp...
     #redirect_to articles_path if logged_in?
 
+    active_app('home')
     render "home"
   end
 
-  def about; end
+  def about
+    active_app('about')
+  end
 end
-

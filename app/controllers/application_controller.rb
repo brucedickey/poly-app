@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def initialize
     super
-    @apps        = ['about', 'blog', 'messages', 'photos', 'projects', 'stock', 'university']
+    @apps        = ['about', 'blog', 'home', 'messages', 'photos', 'projects', 'stock', 'university']
     @apps_status = {}
 
     clear_apps_status
