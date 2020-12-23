@@ -16,10 +16,10 @@
 .flickr_pagination .disabled {
   color: #aaaaaa; 
 }
-.flickr_pagination .current {
+.flickr_pagination li.active, .flickr_pagination li.active a {
   font-style: normal;
   font-weight: bold;
-  color: #ff0084; 
+  background-color: #B4B4B4; 
 }
 .flickr_pagination a {
   border: 1px solid  #444;

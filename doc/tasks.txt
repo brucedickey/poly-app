@@ -9,7 +9,6 @@ FEATURES TO ADD:
       Instead, go to the prior page, whatever that was.
 
 * Blog: 
-   -- On the pagination buttons, indicate the current page
 
 
 BUGS:
