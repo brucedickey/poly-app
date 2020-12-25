@@ -1,4 +1,83 @@
 
 <div class="container-fluid" id="page-container">
-  <h1> Site Map </h1>
+  <h2> Site Map </h2>
+
+  <div class="d-flex flex-column">
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">About</div>
+        <div class="d-flex flex-row">
+          <div class="p-2"> &nbsp; </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Account</div>
+        <div class="d-flex flex-row flex-wrap">
+          <% if logged_in? %>
+            <div class="p-2">Log Out</div>
+            <div class="p-2">View Profile</div>        
+            <div class="p-2">Edit Profile</div>
+            <div class="p-2">View Members</div>
+          <% else %>
+            <div class="p-2">Log In</div>
+            <div class="p-2">Sign Up</div>
+          <% end %>  
+        </div>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Blog</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2">View All Articles</div>
+          <div class="p-2">Articles In Category V</div>
+          <div class="p-2">Create Article</div>
+          <div class="p-2">Create Category</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Messages</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2"> &nbsp; </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Photos</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2"> &nbsp; </div>      
+        </div>    
+      </div>  
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Projects</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2"> &nbsp; </div>
+        </div>    
+      </div>  
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">Stock</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2"> &nbsp; </div>
+        </div>   
+      </div>   
+    </div>
+    <div class="p-2">
+      <div class="d-flex flex-row flex-nowrap">
+        <div class="p-2 sitemap-col1">University</div>
+        <div class="d-flex flex-row flex-wrap">
+          <div class="p-2"> &nbsp; </div>
+        </div>      
+      </div> 
+    </div>               
+  </div>
 </div>

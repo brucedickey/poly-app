@@ -70,6 +70,9 @@ html, body {
   color: white; 
   font-size: 24px;
 }
+.hamburger_btn a:active, .hamburger_btn a:focus, .hamburger_btn a:hover {
+  text-decoration: none;
+}
 
 #main_menu.navbar {
   display: none;
@@ -159,10 +162,19 @@ html, body {
   margin-right: 20px;
 }
 
+.sitemap-col1 {
+  width: 100px;
+  min-width: 100px;
+  color: black;
+  background-color: #C6C6C6;
+  font-size: 1.1em;
+  border-radius: 8px;
+}
+
 .jumbotron {
   background-image: asset-url('clark-young-unsplash.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 425px;
+  height: 430px;
 }
