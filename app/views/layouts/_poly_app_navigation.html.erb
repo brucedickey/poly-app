@@ -1,46 +1,43 @@
 <!-- LOGO ROW -->
-<nav class="navbar fixed-top navbar-expand-sm" style="height: 50px;">
+<nav class="navbar fixed-top" style="height: 50px;">
   <div class="container-fluid">
-    <div class="ml-1" navbar-brand>
+    <div class="ml-1" style="margin-top: -14px;">
       <a href="/">
         <span id="logo_icon"> &#10044 &nbsp; </span>   <!-- 6-lobed dingbat daisy hollow center -->
         <span class="navbar-brand", id="logo"> poly-app </span>
       </a>
     </div>
-    <ul class="navbar-nav mr-1">
-      <% if logged_in? %>
-        <li class="nav-item">
-          <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
-        </li> 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" 
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Your <%= "Admin" if current_user.admin? %> Profile
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
-            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div> 
-        </li>
-      <% else %>   
-        <li class="nav-item">
-          <%= link_to 'Log in', login_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign up', signup_path, class: "nav-link" %>
-        </li>
-      <% end %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-        <!-- NOT WORKING, and we do not have Font-Awesome in this project, so using Unicode.
-          <span class="navbar-toggler-icon"></span> 
-        -->
-        <span style="color: white; font-size: 24px;"> &#x2630 </span>  <!-- Hamburger character -->
-      </button>
-    </ul>
+    <div class="account-menu mr-1">
+      <ul>
+        <% if logged_in? %>
+          <li class="nav-item" style="display: inline-block;">
+            <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
+          </li> 
+          <li class="nav-item dropdown" style="display: inline-block;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Your <%= "Admin" if current_user.admin? %> Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+              <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div> 
+          </li>
+        <% else %>   
+          <li class="nav-item" style="display: inline-block;">
+            <%= link_to 'Log in', login_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item" style="display: inline-block;">
+            <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <button class="hamburger_btn">
+      <a href="/sitemap"> &#x2630 </a>  <!-- Hamburger -->
+    </button>
   </div>
 </nav>
 

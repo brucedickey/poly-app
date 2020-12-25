@@ -26,33 +26,89 @@ html, body {
   color: orangered; 
   font-size: 42px;
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 
 #logo {
-  float: left;
+  /* float: left; */
   font-size: 1.7em;
   color: #fff;
   /* text-transform: uppercase; */
   letter-spacing: -1px;
   font-weight: bold;
-  }
+  position: relative;
+  top: 2px;  
+}
 
 .navbar-brand {
   font-size: 3rem;
 }
   
+.account-menu {
+  display: none;
+  margin-top: -5px;
+}
+@media all and (min-width: 640px) {
+  .account-menu {
+    display: inline-block;
+  }
+}
+
+.hamburger_btn {
+  display: inline-block;
+  background-color: #222;
+  border: 0px solid black;
+  margin-top: -16px;
+}
+@media all and (min-width: 640px) {
+  .hamburger_btn {
+    display: none;
+  }
+}
+.hamburger_btn a {
+  background-color: #222;
+  color: white; 
+  font-size: 24px;
+}
+
 #main_menu.navbar {
+  display: none;
   background-color: #333;
   height: 40px;
   z-index: 999;
 }
-
 .sub_menu.navbar {
+  display: none;
   background-color: #505050;
   position: fixed;
   height: 30px;
   z-index: 999;
+}
+#page-container {
+  margin-top: 70px;   /* Below the 1 logo nav row 50 + 20px */
+}
+@media all and (min-width: 640px) {
+  #main_menu.navbar {
+    display: flex;
+  }
+  .sub_menu.navbar {
+    display: flex;
+  }
+  #page-container {
+    margin-top: 140px;   /* Below the 3 nav rows (50 + 40 + 30), + 20px */
+  }
+}
+
+.breadcrumb {
+   background-color: transparent;
+   display: flex;
+   margin: 0px;
+   padding: 0px;
+}
+@media all and (min-width: 640px) {
+  .breadcrumb {
+     display: none;
+  }
 }
 
 .sub_menu .nav-link {
@@ -79,10 +135,6 @@ html, body {
 }
 .sub_menu .btn-sm.search-control {
   padding-top: 0.09rem !important;
-}
-
-#page-container {
-  margin-top: 140px;   /* Below the 3 nav rows (50 + 40 + 30), + 20px */
 }
 
 .dropdown-divider {

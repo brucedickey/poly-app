@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   get "/", to: "pages#home"
   get "home", to: "pages#home"
   get "about", to: "pages#about"
+  get "sitemap", to: "pages#sitemap"
 
   namespace :blog do
+    # 
+    # Using a namespace:
+    #
     #     Prefix Verb   URI Pattern                Controller#Action
     # admin_users GET    /admin/users(.:format)     admin/users#index
     #             POST   /admin/users(.:format)     admin/users#create
