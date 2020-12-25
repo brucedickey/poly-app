@@ -11,26 +11,25 @@
       <ul>
         <% if logged_in? %>
           <li class="nav-item" style="display: inline-block;">
-            <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
+            <%= link_to 'Log Out', logout_path, class: "nav-link", method: :delete %>
           </li> 
           <li class="nav-item dropdown" style="display: inline-block;">
-            <a class="nav-link dropdown-toggle" href="#" role="button" 
+            <a class="nav-link dropdown-toggle" href="#" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Your <%= "Admin" if current_user.admin? %> Profile
+              Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
-              <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
-              <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "View Profile", user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "View Members", users_path, class: "dropdown-item" %>
             </div> 
           </li>
         <% else %>   
           <li class="nav-item" style="display: inline-block;">
-            <%= link_to 'Log in', login_path, class: "nav-link" %>
+            <%= link_to 'Log In', login_path, class: "nav-link" %>
           </li>
           <li class="nav-item" style="display: inline-block;">
-            <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+            <%= link_to 'Sign Up', signup_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
@@ -45,15 +44,6 @@
 <nav class="navbar fixed-top navbar-expand-sm" id="main_menu" style="postition: fixed; top: 50px;">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- NOT WORKING, and we do not have Font-Awesome in this project...
-          <span class="navbar-toggler-icon"></span> 
-        -->
-        <span style="color: white; font-size: 24px;"> &#x2630 </span>  <!-- Hamburger character -->
-      </button>
-
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link " + active_app?('home') %>

@@ -1,83 +1,112 @@
 
 <div class="container-fluid" id="page-container">
-  <h2> Site Map </h2>
+  <h3> Site Map </h3>
 
   <div class="d-flex flex-column">
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">About</div>
-        <div class="d-flex flex-row">
-          <div class="p-2"> &nbsp; </div>
-        </div>
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">
+        <%= link_to "About", about_path %>
       </div>
+      <div class="d-flex flex-row">
+        <div class="p-2"> &nbsp; </div>
       </div>
     </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Account</div>
-        <div class="d-flex flex-row flex-wrap">
-          <% if logged_in? %>
-            <div class="p-2">Log Out</div>
-            <div class="p-2">View Profile</div>        
-            <div class="p-2">Edit Profile</div>
-            <div class="p-2">View Members</div>
-          <% else %>
-            <div class="p-2">Log In</div>
-            <div class="p-2">Sign Up</div>
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Account</div>
+      <div class="d-flex flex-row flex-wrap">
+        <% if logged_in? %>
+          <div class="p-2">
+            <%= link_to 'Log Out', logout_path, method: :delete %>
+          </div>
+          <div class="p-2">
+            <%= link_to "View Profile", user_path(current_user) %>
+          </div>        
+          <div class="p-2">
+            <%= link_to "Edit Profile", edit_user_path(current_user) %> 
+          </div>
+          <div class="p-2">
+            <%= link_to "View Members", users_path %>
+          </div>
+        <% else %>
+          <div class="p-2">
+            <%= link_to 'Log in', login_path %>
+          </div>
+          <div class="p-2">
+            <%= link_to 'Sign up', signup_path %>
+          </div>
+        <% end %>  
+      </div>
+    </div>
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Blog</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2">
+          <%= link_to "View All Articles", blog_articles_path %>
+        </div>
+        <div class="p-2">
+          <div class="dropdown">
+            <a class="dropdown-toggle" href="#" id="navbarDropdownCategories" 
+              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Articles In Category
+            </a> 
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+              <%= link_to "All Categories", blog_categories_path, class: "dropdown-item" %>
+              <% Blog::Category.all.each do |category| %>
+                <%= link_to "#{category.name}", blog_category_path(category), class: "dropdown-item" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <% if logged_in? %>
+          <div class="p-2">
+            <%= link_to "Create New article", new_blog_article_path %>
+          </div>
+          <% if current_user.admin? %>
+            <div class="p-2">
+              <%= link_to "Create New Category", new_blog_category_path %>
+            </div>
           <% end %>  
-        </div>
+        <% end %>
       </div>
     </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Blog</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2">View All Articles</div>
-          <div class="p-2">Articles In Category V</div>
-          <div class="p-2">Create Article</div>
-          <div class="p-2">Create Category</div>
-        </div>
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Messages</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2"> &nbsp; </div>
       </div>
     </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Messages</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2"> &nbsp; </div>
-        </div>
-      </div>
-    </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Photos</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2"> &nbsp; </div>      
-        </div>    
-      </div>  
-    </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Projects</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2"> &nbsp; </div>
-        </div>    
-      </div>  
-    </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">Stock</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2"> &nbsp; </div>
-        </div>   
+
+      <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Photos</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2"> &nbsp; </div>      
+      </div>    
+    </div>  
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Projects</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2"> &nbsp; </div>
+      </div>    
+    </div>  
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">Stock</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2"> &nbsp; </div>
       </div>   
-    </div>
-    <div class="p-2">
-      <div class="d-flex flex-row flex-nowrap">
-        <div class="p-2 sitemap-col1">University</div>
-        <div class="d-flex flex-row flex-wrap">
-          <div class="p-2"> &nbsp; </div>
-        </div>      
-      </div> 
-    </div>               
+    </div>   
+
+    <div class="p-2 d-flex flex-row flex-nowrap">
+      <div class="p-2 sitemap-col1">University</div>
+      <div class="d-flex flex-row flex-wrap">
+        <div class="p-2"> &nbsp; </div>
+      </div>      
+    </div> 
+
   </div>
 </div>
