@@ -7,10 +7,15 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   def new
+    # Is cancelable; in that case return to the pervious page.
+    session[:return_to] = request.referer 
     @user = User.new
   end
 
-  def edit; end
+  def edit
+    # Is cancelable; in that case return to the pervious page.
+    session[:return_to] = request.referer 
+  end
 
   def update
     if @user.update(user_params)

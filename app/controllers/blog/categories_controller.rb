@@ -11,6 +11,9 @@ module Blog
     end
 
     def new
+      # Is cancelable; in that case return to the pervious page.
+      session[:return_to] = request.referer 
+
       @category = Category.new
     end
 
@@ -25,6 +28,9 @@ module Blog
     end
 
     def edit
+      # Is cancelable; in that case return to the pervious page.
+      session[:return_to] = request.referer 
+            
       @category = Category.find(params[:id])
     end
 

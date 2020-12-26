@@ -20,10 +20,16 @@ module Blog
     end
 
     def new
+      # Is cancelable; in that case return to the pervious page.
+      session[:return_to] = request.referer 
+
       @article = Article.new
     end
 
     def edit
+      # Is cancelable; in that case return to the pervious page.
+      session[:return_to] = request.referer
+
       # @article = Article.find(params[:id])
     end
 
@@ -60,7 +66,6 @@ module Blog
       redirect_to blog_articles_path
     end
 
-    # Place `private` near the bottom -- all methods AFTER it are private.
     private
 
     def set_article
@@ -75,7 +80,7 @@ module Blog
       return unless (current_user != @article.user) && !current_user.admin?
 
       flash[:warning] = "You can only edit or delete your own articles"
-      redirect_to @article   # root_path
+      redirect_to @article
     end
   end
 end
