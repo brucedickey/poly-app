@@ -15,7 +15,10 @@ FEATURES TO ADD:
 BUGS:
    -- If on a create/edit category/article page, the Edit Profile form is brought up and the Cancel 
       link is clicked on that, then redirection is to the previous form. It should be to the non-
-      form page prior to that. Or disallow menu items when a form is up.
+      form page prior to that. Or disallow menu items when a form is up. Or cancel form first if 
+      Edit Profile is clicked.
+   -- Edit Category Name --> error: param is missing or empty: Category
+   
 
 TODO:
 
