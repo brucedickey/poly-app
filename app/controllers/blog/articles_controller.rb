@@ -10,8 +10,6 @@ module Blog
     def show
       # byebug   # Pauses at debug console
       # render plain: "In show()"
-
-      # @article = Article.find(params[:id])
     end
 
     def index
@@ -41,7 +39,7 @@ module Blog
       if @article.save
         flash[:success] = "Article was created successfully"
         # redirect_to article_path(@article)
-        redirect_to @article # The shortcut way
+        redirect_to @article   # The shortcut way
       else
         render "new"
       end
@@ -60,10 +58,8 @@ module Blog
     end
 
     def destroy
-      # @article = Article.find(params[:id])
-
       @article.destroy
-      redirect_to blog_articles_path
+      redirect_to request.referer
     end
 
     private
