@@ -52,7 +52,10 @@ module Blog
     private
 
     def category_params
-      params.require(:category).permit(:name)
+      #params.require(:category).permit(:name)
+      params.require(:blog_category)
+      params[:blog_category].require(:name)
+      { "name" => params[:blog_category][:name] }
     end
 
     def require_admin
