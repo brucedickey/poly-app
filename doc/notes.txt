@@ -1,6 +1,9 @@
 
 notes.txt
-===============================================================================
+
+==========================================================================================================================
+Blog
+===========
 
 * Source: 
     https://github.com/udemyrailscourse/alpha-blog
@@ -111,3 +114,69 @@ user.toggle!(:admin)        -- Toggle admin Boolean
 
 
 * The logo image is the Unicode "Open Center Teardrop-Spoked Asterisk": &#10044;  ✼ 
+
+
+
+=========================================================================================================================================
+Chat
+==========
+
+* Favicon.ico generator: https://gauger.io/fonticon/
+
+
+* Theme colors:
+     Brown: rgba(185, 122, 87, 1)
+
+
+* Accounts for message-me; username, pwd:
+     Hilda, hilda
+     Freida, freida 
+     Zod, zod 
+     Cornwall, cornwall 
+
+
+* Heroku:
+  (Have a free Dyno already, running the alpha-blog app. 
+
+   Options are:
+     * DELETE the previous app on Heroku to run this one, & 
+       forego having multiple apps publically visible.
+     * Pay a lot to host multiple RoR apps.
+     * Combine features of the various coursework apps into a single app.
+  )
+
+  $ heroku run rails db:seed
+  Running rails db:seed on ? message-me-bd... done
+   »   Error: Cannot run more than 1 Free size dynos.
+   »
+   »   Error ID: cannot_run_above_limit
+   »   See https://devcenter.heroku.com/articles/dyno-size#default-scaling-limits
+   »    for more information.
+
+  Heroku offers ONE "Free" tier Dyno.
+
+  Price in the next higher tier, "Hobby", is $84 per year PER app.
+  https://devcenter.heroku.com/articles/usage-and-billing#cost
+
+
+* RoR Free or inexpensive hosting:
+
+  Heroku:     ONE free Dyno (1 app).
+              "Hobby" tier is $84 per year **PER** app ($7/mo.)
+  HostGator:  Shared, ONE domain, $4/mo first year, $10/mo thereafter.
+  A2Hosting:  UNLIMITED domains, $5/mo first year, $12/mo thereafter.
+  FastComet:  Already hosting swsuds.net here, so comparing. 
+              Coud VPS required for RoR, $39/mo first year, $60/mo thereafter.
+
+  RoR is resouce hungry, so most hosts recomend decicated VPS hosting, and that is expensive.
+
+
+* Redis
+     https://riptutorial.com/redis/example/29962/installing-and-running-redis-server-on-windows
+     https://gist.github.com/pubis/1459506
+     https://devcenter.heroku.com/articles/ruby-websockets
+     https://devcenter.heroku.com/articles/heroku-redis#connecting-in-ruby
+     https://www.youtube.com/watch?v=EyGI3u2X8UM
+     
+
+
