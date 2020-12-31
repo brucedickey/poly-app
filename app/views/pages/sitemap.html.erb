@@ -74,9 +74,14 @@
     </div>
 
     <div class="p-2 d-flex flex-row flex-nowrap">
-      <div class="p-2 sitemap-col1">Messages</div>
+      <div class="p-2 sitemap-col1">Chat</div>
       <div class="d-flex flex-row flex-wrap">
-        <div class="p-2"> &nbsp; </div>
+        <div class="p-2">
+          <%= link_to "Chatroom", chat_path %>
+        </div> 
+        <div class="p-2"> 
+          <%= link_to "Friends", users_path %>
+        </div>
       </div>
     </div>
 
