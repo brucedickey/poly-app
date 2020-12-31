@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
   has_many :articles, class_name: "Blog::Article", dependent: :destroy
+  has_many :messages, class_name: "Chat::Message"
 
   validates :username,
     presence:   true,

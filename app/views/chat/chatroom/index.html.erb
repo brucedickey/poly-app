@@ -1,0 +1,45 @@
+<%= render "chat/layouts/navigation" %>
+
+<div class="container-fluid" id="page-container">
+  <span class="breadcrumb"> Chat </span>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4> The Chatroom </h4>
+      <%= image_tag("mug-hot.png", :class => "onpage_logo") %>
+    </div>  
+  </div>  
+  <br />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ui fluid raised card chatbox">
+
+        <div class="content" id="messages">
+          <div class="ui feed" id="message-container">
+            <%= render @messages %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">  
+      <div class="extra content">
+        <%= form_for(@message, 
+                    html: {class: "ui reply form", role: "form"}, 
+                    url: chat_message_path, 
+                    remote: true) do |f| %>
+          <div class="field">
+            <div class="ui fluid icon input">
+              <%= f.text_field :body %>
+              <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
+            </div>
+          </div>    
+        <% end %> 
+      </div>
+    </div>
+  </div>
+  
+</div>

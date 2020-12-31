@@ -179,4 +179,10 @@ Chat
      https://www.youtube.com/watch?v=EyGI3u2X8UM
      
 
+* ActionCable on Heroku: 
+  https://medium.com/swlh/deploying-a-rails-react-app-with-actioncable-to-heroku-cb5d42f41a2a
+
+
+* Rails 6 ActionCable (most helpful):
+  https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
 

@@ -178,3 +178,27 @@ html, body {
   background-size: cover;
   height: 430px;
 }
+
+/* Chat app */ 
+
+.onpage_logo {
+  width: 48px; 
+  height: 48px;
+  margin: 20px 0px;
+}
+
+.chatbox {
+  height: 450px;
+}
+
+#messages {
+  overflow: auto;
+}
+
+.input {
+  button {
+    display: none;
+  }
+}
+
+/* End, Chat app */ 

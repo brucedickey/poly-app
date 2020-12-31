@@ -29,6 +29,11 @@ Rails.application.routes.draw do
     resources :categories, except: [:destroy]
   end
 
+  namespace :chat do 
+    get "/", to: 'chatroom#index'
+    post 'message', to: 'messages#create'
+  end
+
   get "signup", to: "users#new" # Signup form
   # post 'users', to: 'users#create'
   resources :users, except: [:new]
@@ -37,4 +42,7 @@ Rails.application.routes.draw do
   get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
+
+  # Websocket, for the Chat app
+  mount ActionCable.server, at: '/cable'
 end

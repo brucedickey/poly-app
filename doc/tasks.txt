@@ -5,13 +5,21 @@ FEATURES TO ADD:
 
 * Overall app:
    -- Add in the MessageMe app as a sub app.
+   -- Remove blog-specific aspects from the View Members page, and make is an overall information
+      and statistics page covering all the apps. E.g., for the Chat app, it could have a word cloud.
+   -- Add avatars for users.
 
 * Blog: 
    -- Implement search functionality for article titles and/or content.
    -- Implement view of articles by author (similar to by category).
 
+* Chat:
+   -- Implement Chat friends as a subset of overall app users.
+      Decide what this feature is, or remove it.
+   -- Implement list of currently online friends.
+
 BUGS:
-   
+   -- For View Profile and View Members, change the main menu highlight to Home.
 
 TODO:
 
@@ -49,4 +57,3 @@ TODO:
 
 
 SCRATCHPAD:
-
