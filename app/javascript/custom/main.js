@@ -1,6 +1,6 @@
 
 scroll_bottom = function() {
-  var messages = $('#messages');
+  var messages = $('#message-container');
 
   if ( messages.length > 0 ) {
     messages.scrollTop(messages[0].scrollHeight);
@@ -8,21 +8,18 @@ scroll_bottom = function() {
 }
 
 submit_message = function() {
-  $('#message_body').on('keyup', function(e) {
-    if (e.keyCode == 13) {
-      // Not needed; auto clicked.   $('button').click();
+  $('#new_message').on('keyup', function(e) {
+
+    // `keyCode` is deprecated.   if (e.keyCode == 13) {  
+    if (e.key === 'Enter') { 
+
+      // Not needed; auto submitted.   $('#message_submit_btn').click();
       e.target.value = '';
     }
   });
 }
 
 $(document).on('turbolinks:load', function() {   // Is after DOM ready
-  $('.ui.dropdown').dropdown();
-
-  $('.message .close').on('click', function() {
-    $(this).closest('.message').transition('fade');
-  });
-
   submit_message();
   scroll_bottom();
 });

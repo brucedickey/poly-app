@@ -187,18 +187,13 @@ html, body {
   margin: 20px 0px;
 }
 
-.chatbox {
-  height: 450px;
-}
-
-#messages {
+#message-container {
+  height: 400px;
   overflow: auto;
 }
 
-.input {
-  button {
-    display: none;
-  }
+#new_message {
+   width: 85%;
 }
 
 /* End, Chat app */ 

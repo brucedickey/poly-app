@@ -5,41 +5,45 @@
 
   <div class="row">
     <div class="col-md-12">
-      <h4> The Chatroom </h4>
-      <%= image_tag("mug-hot.png", :class => "onpage_logo") %>
+      <div class="d-flex justify-content-center">
+        <div>
+          <%= image_tag("mug-hot.png", :class => "onpage_logo") %>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div>      
+          <h4> The Chatroom </h4>
+        </div>
+      </div>  
     </div>  
   </div>  
   <br />
 
   <div class="row">
     <div class="col-md-12">
-      <div class="ui fluid raised card chatbox">
-
-        <div class="content" id="messages">
-          <div class="ui feed" id="message-container">
-            <%= render @messages %>
-          </div>
+      <div class="card border-secondary shadow p-2 mb-2 bg-white rounded">
+        <div class="card-body" id="message-container">
+          <%= render @messages %>
         </div>
       </div>
     </div>
-  </div>
+  </div>     
 
   <div class="row">
-    <div class="col-md-12">  
-      <div class="extra content">
-        <%= form_for(@message, 
-                    html: {class: "ui reply form", role: "form"}, 
-                    url: chat_message_path, 
-                    remote: true) do |f| %>
-          <div class="field">
-            <div class="ui fluid icon input">
-              <%= f.text_field :body %>
-              <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
-            </div>
-          </div>    
-        <% end %> 
-      </div>
+    <div class="col-md-12">
+      <div class="card border-secondary shadow p-2 mb-2 bg-white rounded">
+        <div class="card-body"> 
+          <%= form_for(@message, 
+                        html: {class: "form", role: "form"}, 
+                        url: chat_message_path, 
+                        remote: true) do |f| %>
+            <div>
+              <%= f.text_field :body, id: "new_message", placeholder: "Enter your message here" %>
+              <%= f.submit 'Submit', id: "message_submit_btn" %>
+            <div/>   
+          <% end %>        
+        </div>
+      </div>  
     </div>
   </div>
-  
 </div>
