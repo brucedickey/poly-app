@@ -4,7 +4,6 @@ tasks.txt
 FEATURES TO ADD:
 
 * Overall app:
-   -- Add in the MessageMe app as a sub app.
    -- Remove blog-specific aspects from the View Members page, and make is an overall information
       and statistics page covering all the apps. E.g., for the Chat app, it could have a word cloud.
       E.g., https://wordcloudapi.com/
@@ -22,7 +21,6 @@ FEATURES TO ADD:
    -- Implement list of currently online friends.
 
 BUGS:
-   -- For the Chat app, fix the sticky footer. https://css-tricks.com/couple-takes-sticky-footer/
    
 
 TODO:
