@@ -53,10 +53,11 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'will_paginate', '3.1.8'
 
 group :development, :test do
-  #gem 'awesome_print', '~>1.8'
+  gem 'awesome_print', '~>1.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  #gem 'hirb'
+  # Used in the Rails console to display tables in table form. Enable with: `Hirb.enable`
+  gem 'hirb'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
 end

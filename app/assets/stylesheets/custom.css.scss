@@ -1,8 +1,8 @@
-@import 'bootstrap/dist/css/bootstrap';
+@import 'bootstrap/dist/css/bootstrap';  /* First */
 @import 'flickr_pagination';
 @import 'blog';
 @import 'chat';
-@import 'sticky_footer';   /* Last */
+@import 'sticky_footer';                 /* Last */
 
 .navbar {
   background-color: black;
