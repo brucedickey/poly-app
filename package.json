@@ -1,5 +1,5 @@
 {
-  "name": "alpha_blog",
+  "name": "poly-app",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

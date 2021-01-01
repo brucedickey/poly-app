@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
 
       flash[:success] =
-        "Welcome to the Alpha Blog, #{@user.username}, you have successfully signed up."
+        "Welcome to poly-app, #{@user.username}, you have successfully signed up."
       redirect_to user_path(@user)   # User's index.html.erb page
     else
       render "new"

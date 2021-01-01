@@ -2,6 +2,21 @@
 notes.txt
 
 ==========================================================================================================================
+poly-app
+===========
+
+* Consists of the 6 apps from the Udemy Ruby  on Raols Complete Developer Course.
+  1. Alpha Blog -- uses Rails 6 and Bootstrap 4.
+  2. Message-Me -- uses Rails 5 and Semantic-UI in the couse, but in poly-app is consistent with the blog.
+  3. Photos     --
+  4. Projects   --
+  5. Stock      --
+  6. University --
+
+* The 6 apps share the authentication system and users.
+
+
+==========================================================================================================================
 Blog
 ===========
 
@@ -186,3 +201,10 @@ Chat
 * Rails 6 ActionCable (most helpful):
   https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
 
+
+==========================================================================================================================
+
+Aspect              Rails 5           Rails6
+-----------         --------          -------
+Client scripting    CoffeScript       ES6
+Build               Asset pipeline    Webpacker
