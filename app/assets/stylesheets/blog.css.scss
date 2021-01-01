@@ -1,0 +1,31 @@
+.search-controls {
+  max-height: 26px;
+}
+
+.search-control {
+  max-height: 26px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.sub_menu .form-control.search-control {
+  padding-top: 0.28rem !important;
+}
+.sub_menu .btn-sm.search-control {
+  padding-top: 0.09rem !important;
+}
+
+.category-badge {
+  background-color: #CEF6F5;
+  color: blue;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category_articles_count {
+  font-size: 0.9rem;
+}
+
+.input_checkbox {
+  margin-right: 20px;
+}

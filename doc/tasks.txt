@@ -9,14 +9,16 @@ FEATURES TO ADD:
       and statistics page covering all the apps. E.g., for the Chat app, it could have a word cloud.
       E.g., https://wordcloudapi.com/
    -- Add avatars for users.
+   -- Is there a better way to organize the CSS? Like add `require` to application.css?
+   -- Clean up the CSS and use SCSS.
 
 * Blog: 
    -- Implement search functionality for article titles and/or content.
    -- Implement view of articles by author (similar to by category).
 
 * Chat:
-   -- Implement Chat friends as a subset of overall app users.
-      Decide what this feature is, or remove it.
+   -- Implement Chat friends as a subset of overall app users; decide what this feature is, or 
+       remove it.
    -- Implement list of currently online friends.
 
 BUGS:

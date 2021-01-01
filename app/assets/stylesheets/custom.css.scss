@@ -1,5 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import 'flickr_pagination';
+@import 'blog';
+@import 'chat';
 
 html, body {
   height: 100%;
@@ -30,10 +32,8 @@ html, body {
 }
 
 #logo {
-  /* float: left; */
   font-size: 1.7em;
   color: #fff;
-  /* text-transform: uppercase; */
   letter-spacing: -1px;
   font-weight: bold;
   position: relative;
@@ -80,6 +80,7 @@ html, body {
   height: 40px;
   z-index: 999;
 }
+
 .sub_menu.navbar {
   display: none;
   background-color: #505050;
@@ -124,42 +125,10 @@ html, body {
   border-radius: 10px 10px 0px 0px;
 }
 
-.search-controls {
-  max-height: 26px;
-}
-
-.search-control {
-  max-height: 26px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.sub_menu .form-control.search-control {
-  padding-top: 0.28rem !important;
-}
-.sub_menu .btn-sm.search-control {
-  padding-top: 0.09rem !important;
-}
-
 .dropdown-divider {
   border-color: darkgrey;
   max-width: 90%;
   margin-left: 5%;
-}
-
-.category-badge {
-  background-color: #CEF6F5;
-  color: blue;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.category_articles_count {
-  font-size: 0.9rem;
-}
-
-.input_checkbox {
-  margin-right: 20px;
 }
 
 .sitemap-col1 {
@@ -178,22 +147,3 @@ html, body {
   background-size: cover;
   height: 430px;
 }
-
-/* Chat app */ 
-
-.onpage_logo {
-  width: 48px; 
-  height: 48px;
-  margin: 20px 0px;
-}
-
-#message-container {
-  height: 400px;
-  overflow: auto;
-}
-
-#new_message {
-   width: 85%;
-}
-
-/* End, Chat app */ 
