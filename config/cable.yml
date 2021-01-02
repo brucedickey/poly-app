@@ -7,10 +7,7 @@ test:
 production:
   adapter: redis
   
-  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   # url: redistogo-encircled-91756
-
-  # See https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
-  url: redis://redistogo:a7056f61d2e09fbe2773806ba5e6ef5f@tetra.redistogo.com:9830/
-
+  
   channel_prefix: poly-app-bd_production
