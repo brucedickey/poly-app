@@ -196,7 +196,7 @@ Chat
 
 * ActionCable on Heroku: 
   https://medium.com/swlh/deploying-a-rails-react-app-with-actioncable-to-heroku-cb5d42f41a2a
-
+  https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable 
 
 * Rails 6 ActionCable:
   https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
