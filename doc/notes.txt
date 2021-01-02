@@ -209,6 +209,8 @@ Chat
   # See https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
   url: redis://redistogo:a7056f61d2e09fbe2773806ba5e6ef5f@tetra.redistogo.com:9830/
 
+  # See REDISTOGO_URL to use in cable.yml
+  https://devcenter.heroku.com/articles/config-vars
 
 
 ==========================================================================================================================
