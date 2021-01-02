@@ -48,13 +48,13 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://redistogo-encircled-91756.herokuapp.com/cable'
   # config.action_cable.allowed_request_origins = [ 'https://redistogo-encircled-91756.heroku.com', 'http:\/\/redistogo-encircled-91756.heroku.*/' ]
 
-  # config.action_cable.url = 'wss://poly-app-bd.herokuapp.com/cable'
+  config.action_cable.url = 'wss://poly-app-bd.herokuapp.com/cable'
 
   # Configure Action Cable's Production URI
   # config.web_socket_server_url = "wss://poly-app-bd.herokuapp.com/cable"
 
   # Allowed Request Origins
-  config.action_cable.allowed_request_origins = ['https://poly-app-bd.herokuapp.com', 'http:\/\/poly-app-bd.herokuapp.*']
+  config.action_cable.allowed_request_origins = ['https://poly-app-bd.herokuapp.com', 'http:\/\/poly-app-bd.herokuapp.*/']
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
