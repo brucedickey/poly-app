@@ -201,6 +201,9 @@ Chat
 * Rails 6 ActionCable:
   https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
 
+* Rails 6: Missing Dev Setup Guide
+  https://dev.to/vvo/a-rails-6-setup-guide-for-2019-and-2020-hf5
+
 
 ==========================================================================================================================
 

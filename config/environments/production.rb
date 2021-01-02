@@ -50,8 +50,8 @@ Rails.application.configure do
 
   # config.action_cable.url = 'wss://poly-app-bd.herokuapp.com/cable'
 
-  #  Configure Action Cable's Production URI
-  config.web_socket_server_url = "wss://poly-app-bd.herokuapp.com/cable"
+  # Configure Action Cable's Production URI
+  # config.web_socket_server_url = "wss://poly-app-bd.herokuapp.com/cable"
 
   # Allowed Request Origins
   config.action_cable.allowed_request_origins = ['https://poly-app-bd.herokuapp.com', 'http:\/\/poly-app-bd.herokuapp.*']
