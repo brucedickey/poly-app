@@ -6,6 +6,9 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  
+  url: <%= ENV.fetch("REDISTOGO_URL") { "redis://localhost:6379/1" } %>
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   # url: redistogo-encircled-91756
+  
   channel_prefix: poly-app-bd_production
