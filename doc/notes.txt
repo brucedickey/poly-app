@@ -195,22 +195,23 @@ Chat
      
 
 * ActionCable on Heroku: 
-  https://medium.com/swlh/deploying-a-rails-react-app-with-actioncable-to-heroku-cb5d42f41a2a
-
+    https://medium.com/swlh/deploying-a-rails-react-app-with-actioncable-to-heroku-cb5d42f41a2a
 
 * Rails 6 ActionCable:
-  https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
+    https://medium.com/@jelaniwoods/get-started-with-action-cable-in-rails-6-4c605f93c9b8
 
 * Rails 6: Missing Dev Setup Guide
-  https://dev.to/vvo/a-rails-6-setup-guide-for-2019-and-2020-hf5
+    https://dev.to/vvo/a-rails-6-setup-guide-for-2019-and-2020-hf5
 
 * cable.yml Redis URI:
   
-  # See https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
-  url: redis://redistogo:a7056f61d2e09fbe2773806ba5e6ef5f@tetra.redistogo.com:9830/
+  Set up a redistogo account on Heroku.
+  See https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
+    url: redis://redistogo:a7056f61d2e09fbe2773806ba5e6ef5f@tetra.redistogo.com:9830/
 
-  # See REDISTOGO_URL to use in cable.yml
-  https://devcenter.heroku.com/articles/config-vars
+  Run `heroku config` to see that REDISTOGO_URL should be used in cable.yml, rather than REDIS_URL:
+    https://devcenter.heroku.com/articles/config-vars
+
 
 
 ==========================================================================================================================
