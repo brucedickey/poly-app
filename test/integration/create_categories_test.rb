@@ -27,8 +27,8 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
       #
       # post_via_redirect categories_path, category: {name: "sports"}
 
-      # Posting to categories_path. On success, redirects to categories_path in create().
-      post categories_path, params: {category: {name: "sports"}}
+      # Posting to blog_categories_path. On success, redirects to blog_categories_path in create().
+      post blog_categories_path, params: {category: {name: "sports"}}
       follow_redirect!
     end
 
@@ -45,7 +45,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
 
     assert_template "categories/new"
     assert_no_difference "Category.count" do
-      post categories_path, params: {category: {name: ""}}   # Pass an invalid empty string
+      post blog_categories_path, params: {category: {name: ""}}   # Pass an invalid empty string
     end
     assert_template "categories/new"
     assert_select "div.alert-danger"

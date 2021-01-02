@@ -9,7 +9,7 @@ class ListCategoriesTest < ActionDispatch::IntegrationTest
   end
 
   test "should show categories listing" do
-    get categories_path
+    get blog_categories_path
     assert_template "categories/index"
     # Check each category title for being a link and having the correct text.
     assert_select "a[href=?]", blog_category_path(@category), text: @category.name
