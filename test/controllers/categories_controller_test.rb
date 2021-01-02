@@ -40,7 +40,7 @@ class CategoriesControllerTest < ActionController::TestCase
       # but does not work here. This is the line from the "Text Directions and code"
       # for Rails 5 as well.
       # TODO: Why does it work in create_categories_test.rb, but not here?
-      # post categories_path, params: {category: {name: "sports"}}   # Rails 5
+      # post blog_categories_path, params: {category: {name: "sports"}}   # Rails 5
 
       # This is from the video. Error: "catetory is undefined"
       # TODO: Assuming no errors, how does this specify a route, the correct route?
@@ -51,6 +51,6 @@ class CategoriesControllerTest < ActionController::TestCase
       post :create, params: { category: { name: "sports" } }
     end
 
-    assert_redirected_to categories_path, "assert_redirected_to categories_path"
+    assert_redirected_to blog_categories_path, "assert_redirected_to blog_categories_path"
   end
 end

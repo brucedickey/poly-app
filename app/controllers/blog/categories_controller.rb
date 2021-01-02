@@ -21,7 +21,7 @@ module Blog
       @category = Category.new(category_params)
       if @category.save
         flash[:success] = "Category was sucessfully created"
-        redirect_to categories_path
+        redirect_to blog_categories_path
       else
         render "new"
       end
@@ -62,7 +62,7 @@ module Blog
       return unless !logged_in? || (logged_in? && !current_user.admin?)
 
       flash[:warning] = "Only admin can perform that action"
-      redirect_to categories_path
+      redirect_to blog_categories_path
     end
   end
 end
