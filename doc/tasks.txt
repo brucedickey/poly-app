@@ -4,6 +4,13 @@ tasks.txt
 FEATURES TO ADD:
 
 * Overall app:
+   -- Updare the README
+   -- Switch to Devise for auth (Part of the Finance Tracker/Stock app).
+       -- Require actual email addresses and confirmation (conf email sent to the user).
+       -- Add data privacy policy statement.
+          -- By using, you thereby consent that all data and activity be viewable to the public and
+             to the creator(s) and maintainer(s) of the app.
+          -- Find a good boilerplate legal blurb....
    -- Remove blog-specific aspects from the View Members page, and make is an overall information
       and statistics page covering all the apps. E.g., for the Chat app, it could have a word cloud.
       E.g., https://wordcloudapi.com/
@@ -19,6 +26,10 @@ FEATURES TO ADD:
    -- Implement Chat friends as a subset of overall app users; decide what this feature is, or 
        remove it.
    -- Implement list of currently online friends.
+
+* Stock:
+   -- Make an index page
+
 
 BUGS:
    
