@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+         
   before_save { self.email = email.downcase }
   has_many :articles, class_name: "Blog::Article", dependent: :destroy
   has_many :messages, class_name: "Chat::Message"
